@@ -6,9 +6,10 @@ export async function getEmployees() {
   return await axios.get(url);
 }
 
-export function addEmployee(firstName, status) {
+export function addEmployee(firstName, lastName, status) {
   return axios.post(url, {
     firstName,
+    lastName,
     status,
   });
 }

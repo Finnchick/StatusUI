@@ -8,9 +8,14 @@ export const EmployeesList = () => {
   const [data, setData] = useState([]);
   const [name, setName] = useState(null);
   const [status, setStatus] = useState(null);
+  const [lastName, setLastName] = useState(null);
 
   const handleNameChange = (event) => {
     setName(event.target.value);
+  };
+
+  const handleLastNameChange = (event) => {
+    setLastName(event.target.value);
   };
 
   const handleStatusChange = (event) => {
@@ -19,7 +24,7 @@ export const EmployeesList = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addEmployee(name, status.toUpperCase()).then((res) => {
+    addEmployee(name, lastName, status.toUpperCase()).then((res) => {
       let newEmployees = [...data, res.data];
       setData(newEmployees);
     });
@@ -37,8 +42,15 @@ export const EmployeesList = () => {
         <input
           type='text'
           name='name'
-          placeholder='Name'
+          placeholder='First name'
           onChange={handleNameChange}
+          required='true'
+        />
+        <input
+          type='text'
+          name='surname'
+          placeholder='Second name'
+          onChange={handleLastNameChange}
           required='true'
         />
         <input
@@ -48,7 +60,7 @@ export const EmployeesList = () => {
           onChange={handleStatusChange}
           required='true'
         />
-        <input type='submit' value='send' />
+        <input className='submit' type='submit' value='send' />
       </form>
 
       {data
