@@ -1,3 +1,6 @@
+Created Api with help of mockapi.io, requests realized with help of axios. Most challenging were to style status bars correctly, but in my opinion I done it good
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
