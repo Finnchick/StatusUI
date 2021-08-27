@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-import { addEmpoyee, getEmployes } from '../../api/apiInterface';
+import { addEmployee, getEmployees } from '../../api/apiInterface';
 import EmployeesStatus from '../EmployesStatus/EmployeesStatus';
 import './style.sass';
 
@@ -19,7 +19,7 @@ export const EmployeesList = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    addEmpoyee(name, status.toUpperCase()).then((res) => {
+    addEmployee(name, status.toUpperCase()).then((res) => {
       let newEmployees = [...data, res.data];
       setData(newEmployees);
     });
@@ -27,7 +27,7 @@ export const EmployeesList = () => {
 
   useEffect(() => {
     if (data.length === 0) {
-      getEmployes().then((results) => setData(results.data), []);
+      getEmployees().then((results) => setData(results.data), []);
     }
   });
 
