@@ -1,4 +1,5 @@
-Created API with the help of mockapi.io, requests were implemented via axios. I found styling the status bars correctly to be the most challenging part of the task, but I think I managed to do it the right way.
+Created API with the help of mockapi.io, requests were implemented via axios. I found styling the status bars correctly to be the most challenging part of the task, but I think I managed to do it the right way. As a result, I made a UI that correctly displays all employees and their statuses. With the help of a series of buttons following the name and surname of the employee, it became very convenient to change the status quickly
+
 
 
 # Getting Started with Create React App
