@@ -1,4 +1,4 @@
-Created Api with help of mockapi.io, requests realized with help of axios. Most challenging were to style status bars correctly, but in my opinion I done it good
+Created API with the help of mockapi.io, requests were implemented via axios. I found styling the status bars correctly to be the most challenging part of the task, but I think I managed to do it the right way.
 
 
 # Getting Started with Create React App
