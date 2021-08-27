@@ -1,10 +1,61 @@
 .employee-line
   display: flex
   align-items: center
+  justify-content: space-between
   margin: 10px
+
 .btn
   height: 50px
-  width: 100px
+  width: 150px
+  background-color: white
+  color: black
+  z-index: auto
+  cursor: pointer
+  position: relative
+  border: 0
+
+
+.btn::after
+  content: ''
+  position: absolute
+  right: -25px
+  top: 0
+  border-bottom: 25px solid transparent
+  border-top: 25px solid transparent
+  border-left: 25px solid white
+  z-index: 1
+
+.btn:hover
   background-color: blue
   color: white
-.btn:after
+
+.btn:hover::after
+  border-left: 25px solid blue
+
+.button-container
+  display: flex
+
+.btn:last-child::after
+  border-bottom: 25px solid transparent
+  border-top: 25px solid transparent
+  border-left: 25px solid white
+
+.btn-active
+  height: 50px
+  width: 150px
+  color: white
+  z-index: auto
+  cursor: pointer
+  position: relative
+  border: 0
+  background-color: blue
+
+.btn-active::after
+  content: ''
+  position: absolute
+  right: -25px
+  top: 0
+  border-bottom: 25px solid transparent
+  border-top: 25px solid transparent
+  border-left: 25px solid blue
+  z-index: 1

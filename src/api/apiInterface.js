@@ -7,15 +7,13 @@ export async function getEmployes() {
 }
 
 export function addEmpoyee(firstName, status) {
-  axios
-    .post(url, {
-      firstName,
-      status,
-    })
-    .then((result) => console.log(result));
+  return axios.post(url, {
+    firstName,
+    status,
+  });
 }
 
 export function changeEmloyeeStatus(id, status) {
-  console.log(`${url} + ${id}`);
+  console.log('id' + id, 'status' + status);
   axios.put(`${url}/${id}`, { status });
 }

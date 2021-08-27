@@ -1,10 +1,9 @@
-import EmployesStatus from './components/EmployesStatus/EmployesStatus';
-import { EmployesList } from './components/EmployesList/EmployesList';
+import { EmployeesList } from './components/EmployesList/EmployeesList';
 
 function App() {
   return (
     <div className='App'>
-      <EmployesList />
+      <EmployeesList />
     </div>
   );
 }
